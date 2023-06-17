@@ -23,7 +23,8 @@ def open_file():
         formatted_duration = convert_seconds(duration)
         
         # Set the text of the duration label
-        duration_text.set(formatted_duration)
+        duration_text.set(f"Video duration: {formatted_duration}")
+
 
 def get_video_duration(file_path):
     clip = VideoFileClip(file_path)
@@ -169,6 +170,7 @@ duration_text = ctk.StringVar()
 duration_label = ctk.CTkLabel(root, textvariable=duration_text)
 duration_label.grid(row=6, column=3, columnspan=1, pady=(20, 0), sticky="nsew")
 ctk.CTkButton(root, text="Trim Video", command=trim_video).grid(row=7, column=1, pady=(20, 0),)
+
 
 ctk.CTkLabel(root, text="Status").grid(row=8, column=1, pady=(20, 0), sticky="nsew")
 ctk.CTkLabel(root, textvariable=status_var).grid(row=8, column=2)
