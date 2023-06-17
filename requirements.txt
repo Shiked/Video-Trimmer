@@ -1,2 +1,2 @@
 moviepy
-ttkbootstrap
+customtkinter
