@@ -2,3 +2,5 @@
 .venv*
 activate*
 *.txt
+
+test.py
